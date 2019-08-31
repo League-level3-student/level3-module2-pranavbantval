@@ -19,18 +19,30 @@ class _01_SwappingDigits {
 		assertArrayEquals(q, z);
 		
 		int[] m = {7, 3, 9, 5, 2};
-		assertEquals(5, findMiddle(m));
+	assertEquals(5, findMiddle(m));
 	}
-	
+	static int x;
+	static int y;
+	static double z;
 	//1. Complete the method so that the first two elements of the array are swapped
 	public static void swapArrayOfTwo(int[] arr) {
-		
+	 x=arr[1];
+	arr[1]=arr[2];
+	arr[2]=x;
 	}
 	
 	//2. Complete the method so that it sorts the array using a bubble sort.
 	//   Iterate through the array and when you find two elements that are out
 	//   of order, swap them. Repeat this until the array is in order.
 	public static void sortIntArray(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			
+			 if(arr[i]<arr[i+1]) {
+				y=arr[i];
+				arr[i]=arr[i+1];
+				arr[i+1]=y;
+			}
+		}
 		
 	}
 	
@@ -38,6 +50,11 @@ class _01_SwappingDigits {
 	//   *Hint* it helps to sort it first.
 	//   *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		return 0;
+		sortIntArray(arr);
+		
+		z=arr.length/2;
+		z-=0.5;
+		
+		return arr[(int) z];
 	}
 }

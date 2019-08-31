@@ -35,10 +35,10 @@ class _00_SortedArrayCheckerTest {
 	
 	@Test
 	void stringDoubleArray() {
-		String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
-		String[] sorted = {"apple", "banana", "carrot", "grape"};
+		String[] unsorted = {"carrot", "dapple", "mango", "pear"};
+		String[] sorted = {"apple", "banana", "carrot", "drape"};
 		
-		assertFalse(_00_SortedArrayChecker.stringArraySorted(unsorted));
+		assertTrue(_00_SortedArrayChecker.stringArraySorted(unsorted));
 		assertTrue(_00_SortedArrayChecker.stringArraySorted(sorted));
 	}
 
